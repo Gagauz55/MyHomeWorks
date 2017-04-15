@@ -25,6 +25,5 @@ public class enterNumbers {
         client.arraySort(mas);
 
 
-
     }
 }

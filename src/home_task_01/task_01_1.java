@@ -13,5 +13,6 @@ public class task_01_1 {
 
         String name = (String) sc.nextLine();
              System.out.println("Hello,"+" "+name);
+
     }
 }
