@@ -17,7 +17,7 @@ public class AppRun {
         MenuHelper runner= new MenuHelper();
 
         runner.MenuArray();
-        runner.MenuChoise();
+        runner.MenuChoice();
 
 
     }

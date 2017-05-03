@@ -32,7 +32,7 @@ public class MenuHelper {
         System.out.println("Вы задали массив:" + " " + Arrays.toString(holder.mas));
     }
 
-    public void MenuChoise() {
+    public void MenuChoice() {
         int choice;
 do {
         System.out.println();
@@ -72,7 +72,7 @@ do {
                 default: {
                     System.out.println("Пожалуйста сделайте Ваш выбор!");
                 }
-                MenuChoise();
+                MenuChoice();
 
 
             }
