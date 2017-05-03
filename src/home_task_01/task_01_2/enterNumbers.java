@@ -1,6 +1,6 @@
 package home_task_01.task_01_2;
-import  java.util.Scanner;
-import java.util.Arrays;
+import  java.util.*;
+
 /**
  * Trunov Dmitry
  * Создать консольное приложение, которое просит пользователя ввести из консоли 5 чисел
