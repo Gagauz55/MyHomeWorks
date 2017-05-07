@@ -4,11 +4,19 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-
 public class MenuHelper {
     ArrayHolder holder = new ArrayHolder();
     Scanner sc = new Scanner(System.in);
+    int size,check;
 
+    public int intFromScanner (Scanner sc) {
+        while (!sc.hasNextInt())
+        {
+            System.err.println("Пожалуйста, введите целое число!");
+            sc.next();
+        }
+        return check=sc.nextInt();
+    }
 
 
     public void MenuArray() {
@@ -17,7 +25,9 @@ public class MenuHelper {
 
         System.out.print("Введите размерность массива:");
 
-        int size = sc.nextInt();
+
+        intFromScanner(sc);
+        size = check;
 
         holder.Array(size);
         System.out.println();
@@ -26,7 +36,8 @@ public class MenuHelper {
         for (int i = 0; i < holder.mas.length; i++) {
 
             System.out.print("Элемент №" + (i + 1) + ":");
-            holder.mas[i] = sc.nextInt();
+            intFromScanner(sc);
+            holder.mas[i] = check;
         }
         System.out.println();
         System.out.println("Вы задали массив:" + " " + Arrays.toString(holder.mas));
@@ -34,20 +45,21 @@ public class MenuHelper {
 
     public void MenuChoice() {
         int choice;
-do {
-        System.out.println();
-        System.out.println("     ==Меню работы с элементами==");
-        System.out.println();
-        System.out.println(" - Для поиска числа по значению, нажмите - 1;");
-        System.out.println(" - Сортировка элементов массива по возрастанию, нажмите - 2;");
-        System.out.println(" - Сортировка элементов массива по убыванию, нажмите - 3;");
-        System.out.println(" - Для выхода из программы нажмите - 4");
-
-        choice = sc.nextInt();
+        do {
+            System.out.println();
+            System.out.println("     ==Меню работы с элементами==");
+            System.out.println();
+            System.out.println(" - Для поиска числа по значению, нажмите - 1;");
+            System.out.println(" - Сортировка элементов массива по возрастанию, нажмите - 2;");
+            System.out.println(" - Сортировка элементов массива по убыванию, нажмите - 3;");
+            System.out.println(" - Для выхода из программы нажмите - 4");
+intFromScanner(sc);
+            choice = check;
             switch (choice) {
                 case 1: {
                     System.out.print("Введите число для поиска:");
-                    int digit = sc.nextInt();
+                    intFromScanner(sc);
+                    int digit = check;
                     holder.Search(digit);
                     break;
                 }
