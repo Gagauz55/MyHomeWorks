@@ -7,15 +7,14 @@ import java.util.Scanner;
 public class MenuHelper {
     ArrayHolder holder = new ArrayHolder();
     Scanner sc = new Scanner(System.in);
-    int size,check;
+    int size, check;
 
-    public int intFromScanner (Scanner sc) {
-        while (!sc.hasNextInt())
-        {
+    public int intFromScanner(Scanner sc) {
+        while (!sc.hasNextInt()) {
             System.err.println("Пожалуйста, введите целое число!");
             sc.next();
         }
-        return check=sc.nextInt();
+        return check = sc.nextInt();
     }
 
 
@@ -28,19 +27,27 @@ public class MenuHelper {
 
         intFromScanner(sc);
         size = check;
+        if (size < 1) {
+            System.out.println();
+            System.out.println("Размер массива должен быть больше нуля!");
+            System.out.println();
 
-        holder.Array(size);
-        System.out.println();
+            MenuArray();
+        } else {
+            holder.Array(size);
+            System.out.println();
 
-        System.out.println("Введите элементы массива:");
-        for (int i = 0; i < holder.mas.length; i++) {
 
-            System.out.print("Элемент №" + (i + 1) + ":");
-            intFromScanner(sc);
-            holder.mas[i] = check;
+            System.out.println("Введите элементы массива:");
+            for (int i = 0; i < holder.mas.length; i++) {
+
+                System.out.print("Элемент №" + (i + 1) + ":");
+                intFromScanner(sc);
+                holder.mas[i] = check;
+            }
+            System.out.println();
+            System.out.println("Вы задали массив:" + " " + Arrays.toString(holder.mas));
         }
-        System.out.println();
-        System.out.println("Вы задали массив:" + " " + Arrays.toString(holder.mas));
     }
 
     public void MenuChoice() {
@@ -53,7 +60,7 @@ public class MenuHelper {
             System.out.println(" - Сортировка элементов массива по возрастанию, нажмите - 2;");
             System.out.println(" - Сортировка элементов массива по убыванию, нажмите - 3;");
             System.out.println(" - Для выхода из программы нажмите - 4");
-intFromScanner(sc);
+            intFromScanner(sc);
             choice = check;
             switch (choice) {
                 case 1: {
