@@ -19,18 +19,14 @@ public class MenuHelper {
 
 
     public void MenuArray() {
-        System.out.println("     ==Меню работы с масивом==");
-        System.out.println();
-
+        System.out.println("     \n==Меню работы с масивом==\n");
         System.out.print("Введите размерность массива:");
 
 
         intFromScanner(sc);
         size = check;
-        if (size < 1) {
-            System.out.println();
-            System.out.println("Размер массива должен быть больше нуля!");
-            System.out.println();
+        if (size <= 1) {
+            System.out.println("\nВведите корректный ращмер массива!\n");
 
             MenuArray();
         } else {
@@ -45,17 +41,14 @@ public class MenuHelper {
                 intFromScanner(sc);
                 holder.mas[i] = check;
             }
-            System.out.println();
-            System.out.println("Вы задали массив:" + " " + Arrays.toString(holder.mas));
+            System.out.println("\nВы задали массив:" + " " + Arrays.toString(holder.mas));
         }
     }
 
     public void MenuChoice() {
         int choice;
         do {
-            System.out.println();
-            System.out.println("     ==Меню работы с элементами==");
-            System.out.println();
+            System.out.println("     \n==Меню работы с элементами==\n");
             System.out.println(" - Для поиска числа по значению, нажмите - 1;");
             System.out.println(" - Сортировка элементов массива по возрастанию, нажмите - 2;");
             System.out.println(" - Сортировка элементов массива по убыванию, нажмите - 3;");

@@ -33,22 +33,20 @@ public class ArrayHolder {
         }
     }
 
+
     public void Search(int element) {
         int i;
+        boolean count=false;
         for (i = 0; i < mas.length; i++) {
             if (mas[i] == element) {
                 System.out.println("Число" + " " + element + " является " + (i + 1) + "-м" + " по счету в массиве");
-                break;
+            count=true;
             }
         }
-        if (i == mas.length) {
+        if (count==false) {
             System.out.println("Число " + element + " не найдено в массиве");
 
 
         }
     }
 }
-
-
-
-
