@@ -1,5 +1,7 @@
 package home_task_02;
 
+import home_task_02_1.MyCollection;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -19,7 +21,7 @@ public class MenuHelper {
 
 
     public void MenuArray() {
-        System.out.println("     \n==Меню работы с масивом==\n");
+        System.out.println("     \n==Меню работы с массивом==\n");
         System.out.print("Введите размерность массива:");
 
 
